@@ -1,0 +1,12 @@
+
+@font-face {
+    font-family: pacifico;
+    src: url(../fonts/Pacifico-Regular.ttf) format("opentype");
+}
+@font-face {
+    font-family: anton;
+    src: url(../fonts/Anton-Regular.ttf) format("opentype");
+}
+body{
+font-family: anton;
+}
