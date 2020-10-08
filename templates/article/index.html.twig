@@ -8,23 +8,22 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
+                <th>Image</th>
                 <th>Title</th>
                 <th>Min</th>
-                <th>Image</th>
                 <th>actions</th>
             </tr>
         </thead>
         <tbody>
         {% for article in articles %}
             <tr>
-                <td>{{ article.id }}</td>
+                <td><img src="{{ asset('uploads/article_photo/' ~ article.image) }}"></td>
                 <td>{{ article.title }}</td>
                 <td>{{ article.min }}</td>
-                <td>{{ article.image }}</td>
                 <td>
                     <a href="{{ path('article_show', {'id': article.id}) }}">show</a>
                     <a href="{{ path('article_edit', {'id': article.id}) }}">edit</a>
+                    <a href="{{ path('article_delete', {'id': article.id}) }}">delete</a>
                 </td>
             </tr>
         {% else %}
@@ -36,4 +35,7 @@
     </table>
 
     <a href="{{ path('article_new') }}">Create new</a>
+    <div class="alert alert-secondary" role="alert">
+        A simple secondary alert—check it out!
+    </div>
 {% endblock %}
